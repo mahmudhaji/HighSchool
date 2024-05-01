@@ -1,0 +1,16 @@
+<app-card title="School Form" subtitle="Create a School">
+
+    <form [formGroup]="schoolForm" autocomplete="off">
+        <div class="row">
+            <div class="col-md-5">
+                <mat-form-field class="w-100 example-full-width" appearance="outline">
+                    <mat-label>Name</mat-label>
+                    <input matInput formControlName="schName" placeholder="Name">
+                </mat-form-field>
+            </div>
+        </div>
+    </form>
+    <button mat-raised-button color="primary" [disabled]="schoolForm.invalid" (click)="onSave()">Save </button>
+</app-card>
+
+

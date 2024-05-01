@@ -1,0 +1,27 @@
+<app-card title="Student Form" subtitle="Create a Student">
+
+    <form [formGroup]="studentForm" autocomplete="off">
+        <div class="row">
+            <div class="col-md-5">
+                <mat-form-field class="w-100 example-full-width" appearance="outline">
+                    <mat-label>Name</mat-label>
+                    <input matInput formControlName="name" placeholder="Name">
+                </mat-form-field>
+            </div>
+            <div class="col-md-5">
+                <mat-form-field class="w-100 example-full-width" appearance="outline">
+                    <mat-label>Phone</mat-label>
+                    <input matInput formControlName="phone" placeholder="Phone">
+                </mat-form-field>
+            </div>
+            <div class="col-md-5">
+                <mat-form-field class="w-100 example-full-width" appearance="outline">
+                    <mat-label>Age</mat-label>
+                    <input matInput formControlName="age" placeholder="Age">
+                </mat-form-field>
+            </div>
+        </div>
+    </form>
+    <button mat-raised-button color="primary" [disabled]="studentForm.invalid" (click)="onSave()">Save </button>
+</app-card>
+
